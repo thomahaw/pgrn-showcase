@@ -1,0 +1,297 @@
+/*
+Theme Name: PGRN.de Wordpress Theme
+Author: Thomas Wissel
+Description: Wordpress Theme für pgrn.de 
+Version: 1.1.0
+Tags: Theme
+Text Domain: pgrn-theme
+*/
+:root {
+  --primary-brand-color: #40575d;
+  --secondary-brand-color: #96bb7d;
+}
+main {
+  max-width: 1800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.color {
+  background-color: var(--secondary-brand-color);
+}
+.color-light {
+  background-color: #c6d6b9;
+}
+.color-dark {
+  background-color: var(--primary-brand-color);
+}
+.colorsec {
+  background-color: #f1f8e9;
+  box-sizing: border-box;
+}
+.colorsec-light {
+  background-color: #ffffff;
+}
+.colorsec-dark {
+  /*
+	background-color:#c7c7c7;*/
+  background-color: #bec5b7;
+}
+.font-prim {
+  font-family: "Exo 2", sans-serif;
+}
+.font-sec {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+}
+img {
+  width: 100%;
+}
+.carousel-caption {
+  top: 60%;
+  transform: translateY(-50%);
+  text-transform: uppercase;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 0.5em;
+}
+.red {
+  background-color: red;
+}
+.carousel .btn {
+  font-size: 18px;
+  color: white;
+  padding: 12px 22px;
+  background-color: black;
+}
+.logo > img {
+  width: 100%;
+  min-width: 190px;
+  max-width: 300px;
+  margin: auto;
+}
+.logo {
+  width: 40%;
+}
+.infoicon {
+  font-size: 1.2em;
+}
+@media (min-width: 1201px) {
+  .site {
+    /* max-width: 1400px; */
+    margin: auto;
+    min-width: 1200px;
+    width: 100%;
+    /* box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3); */
+  }
+}
+@media (max-width: 1200px) {
+  .site {
+    width: 100%;
+    margin: auto;
+  }
+}
+@media (min-width: 1201px) {
+  .welcome {
+    width: 70%;
+    min-width: 1000px;
+    margin: auto;
+  }
+}
+@media (max-width: 1200px) {
+  .welcome {
+    width: 100%;
+  }
+}
+.infotext {
+  padding-left: 0.5em;
+  text-align: left;
+  font-size: 1em;
+}
+.inforesp {
+  padding-right: 0.5em;
+  text-align: right;
+}
+.navbar {
+  font-size: 1.2em;
+  border-bottom-right-radius: 4px;
+}
+nav ul {
+  display: flex;
+  justify-content: space-around;
+}
+@media (min-width: 767px) {
+  .sub-menu {
+    list-style: none !important;
+    position: absolute;
+    display: none;
+  }
+  .nav li:hover > ul.sub-menu {
+    display: block;
+    margin: 0;
+    z-index: 1000;
+  }
+  .sub-menu li {
+    width: auto;
+    margin-left: -50px;
+    background-color: var(--primary-brand-color);
+    padding: 8px 20px;
+  }
+}
+.mobNav > nav > div > .in {
+  display: block !important;
+}
+.mobNav .dropdown.open > .sub-menu {
+  background-color: rgb(255, 255, 255, 0.5);
+  display: block;
+  color: white;
+}
+
+.current_page_item > a,
+.nav li:hover > a,
+.menu-item a:hover,
+.current_page_ancestor > a {
+  color: white !important;
+  text-decoration: none;
+}
+.menu-item a {
+  color: rgba(255, 255, 255, 0.5);
+}
+.menu-item-has-children > a::after {
+  display: inline-block;
+  margin-left: 0.255em;
+  vertical-align: 0.255em;
+  content: "";
+  border-top: 0.3em solid;
+  border-right: 0.3em solid transparent;
+  border-bottom: 0;
+  border-left: 0.3em solid transparent;
+}
+.infobuttons .btn {
+  background-color: var(--secondary-brand-color);
+}
+/*Font-Size breakpoints*/
+@media (max-width: 1200px) {
+  .pagetitle {
+    font-size: 2em;
+  }
+  .pagetitle-sm {
+    font-size: 1.9em;
+  }
+}
+@media (max-width: 880px) {
+  .pagetitle {
+    font-size: 1.6em;
+  }
+  .pagetitle-sm {
+    font-size: 1.2em;
+  }
+}
+@media (max-width: 550px) {
+  .pagetitle {
+    font-size: 1.3em;
+  }
+  .pagetitle-sm {
+    font-size: 1em;
+  }
+  h5 {
+    font-size: 1em;
+  }
+  nav {
+    font-size: 1em;
+  }
+}
+@media (max-width: 380px) {
+  .pagetitle {
+    font-size: 1.1em;
+  }
+  .pagetitle-sm {
+    font-size: 1em;
+  }
+}
+@media (max-width: 340px) {
+  .pagetitle {
+    font-size: 1em;
+    font-weight: bold;
+  }
+  .pagetitle-sm {
+    font-size: 1em;
+  }
+}
+@media (max-width: 900px) {
+  .nav-link {
+    font-size: 0.8em;
+  }
+}
+.navbar-toggler {
+  font-size: 0.8em;
+}
+.line-half {
+  width: 60%;
+  min-width: 200px;
+}
+.line-short {
+  width: 25%;
+  min-width: 100px;
+}
+.card-deck {
+  column-count: 4;
+}
+#topBtn {
+  visibility: hidden;
+  position: fixed;
+  top: 90%;
+  right: 22%;
+  width: auto;
+  height: auto;
+  color: white;
+}
+.dropdown-menu {
+  background-color: var(--secondary-brand-color);
+}
+.dropdown-menu .active {
+  background-color: var(--primary-brand-color);
+  color: black;
+}
+.welcome-mid {
+  color: white;
+}
+.cont-centered {
+  width: 100%;
+  max-width: 500px;
+}
+footer {
+  background-color: var(--primary-brand-color);
+  width: 100%;
+  margin: auto;
+}
+footer > a {
+  font-size: 0.8em !important;
+  /* color: var(--primary-brand-color) !important; */
+  color: white !important;
+
+  text-decoration: none !important;
+
+}
+/* .link-unstyled {
+	&,
+	&:visited,
+	&:hover,
+	&:active,
+	&:focus,
+	&:active:hover {
+		font-style: inherit;
+		color: inherit;
+		background-color: transparent;
+		font-size: inherit;
+		text-decoration: none;
+		font-variant: inherit;
+		font-weight: inherit;
+		line-height: inherit;
+		font-family: inherit;
+		border-radius: inherit;
+		border: inherit;
+		outline: inherit;
+		box-shadow: inherit;
+		padding: inherit;
+		vertical-align: inherit;
+	}
+} */

@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <title>pgrn-showcase: für bekannte Patienten</title>
+    <meta name="description" content="" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Exo+2&family=Open+Sans&family=Work+Sans&display=swap");
+
+      .card {
+        border-radius: 0;
+        border: none;
+      }
+      .card-title h1 h2 h3 h4 h5 {
+        font-family: "Exo 2", sans-serif !important;
+      }
+      .cardrow > div > .card{
+        margin: 0px;
+      }
+      .mainnav * a {
+        text-decoration: none !important;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="site" style="background-color: whitesmoke;">
+      <!-- Header -->
+      <div class="header">
+        <div class="w-100 d-flex flex-row justify-content-between m-auto" style="max-width: 1800px;">
+            <div class="logo d-flex align-items-center" style="flex: 1">
+              <a href="index.html">
+                <img
+                  src="https://pgrn.de/wp-content/themes/pgrn_theme/images/logo_pgrn.png"
+                  class="img-fluid"
+                />
+              </a>
+            </div>
+            <div
+              class="d-flex flex-column align-items-center justify-content-center p-2"
+              styles="flex: 2"
+            >
+              <div class="text-center text-nowrap">
+                <h1 class="pagetitle">Internistische Praxisgemeinschaft</h1>
+              </div>
+              <div class="text-center text-nowrap">
+                <h1 class="pagetitle-sm">Rheumatologie . Nephrologie</h1>
+              </div>
+            </div>
+            <div class="d-flex justify-content-end" style="flex: 1">
+              <div class="btn-group-vertical infobuttons align-items-md-center">
+                <a
+                  href="https://pgrn.de/sprechzeiten"
+                  class="btn btn-light rounded-0"
+                  role="button"
+                >
+                  <div
+                    class="d-flex align-items-center justify-content-md-end justify-content-lg-start time"
+                  >
+                    <div class="d-none d-md-block d-lg-none inforesp">
+                      Sprechzeiten
+                    </div>
+                    <div class="d-block infoicon">
+                      <i class="far fa-clock"></i>
+                    </div>
+                    <div class="d-none d-lg-block infotext">
+                      08:00 - 17:00 Uhr (Mo - Do)<br />
+                      08:00 - 12:00 Uhr (Fr)<br />
+                      Geschlossen 12:00 - 13:45 Uhr
+                    </div>
+                  </div>
+                </a>
+                <a
+                  href="https://pgrn.de/kontakt"
+                  class="btn btn-light rounded-0"
+                  role="button"
+                >
+                  <div
+                    class="d-flex align-items-center justify-content-md-end justify-content-lg-start phone"
+                  >
+                    <div class="d-none d-md-block d-lg-none inforesp">
+                      Telefon
+                    </div>
+                    <div class="d-block infoicon">
+                      <i class="fas fa-phone"></i>
+                    </div>
+                    <div class="d-none d-lg-block infotext">09131 89000</div>
+                  </div>
+                </a>
+                <a
+                  href="https://pgrn.de/anfahrt"
+                  class="btn btn-light rounded-0"
+                  role="button"
+                >
+                  <div
+                    class="d-flex align-items-center justify-content-md-end justify-content-lg-start addr"
+                  >
+                    <div class="d-none d-md-block d-lg-none inforesp">
+                      Anfahrt
+                    </div>
+                    <div class="d-block infoicon">
+                      <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="d-none d-lg-block infotext">
+                      Möhrendorfer Str. 1c <br />
+                      91056 Erlangen
+                    </div>
+                  </div>
+                </a>
+                <a
+                  href="https://pgrn.de/rezept"
+                  class="btn btn-light d-none d-md-block rounded-0"
+                  role="button"
+                >
+                  <div
+                    class="d-flex align-items-center justify-content-md-end justify-content-lg-start rezept"
+                  >
+                    <div class="d-none d-md-block d-lg-none inforesp">
+                      Rezeptbestellung
+                    </div>
+                    <div class="infoicon">
+                      <i class="fab fa-wpforms"></i>
+                    </div>
+                    <div class="d-none d-lg-block infotext">
+                      Rezeptbestellung
+                    </div>
+                  </div>
+                </a>
+                <a
+                  href="https://pgrn.de/sprechzeiten"
+                  class="btn btn-light d-none d-md-block rounded-0"
+                  role="button"
+                >
+                  <div
+                    class="d-flex align-items-center justify-content-md-end justify-content-lg-start infoelem termin"
+                  >
+                    <div class="d-none d-md-block d-lg-none inforesp">
+                      Terminvergabe
+                    </div>
+                    <div class="infoicon">
+                      <i class="far fa-calendar-alt"></i>
+                    </div>
+                    <div class="d-none d-lg-block infotext">Terminvergabe</div>
+                  </div>
+                </a>
+              </div>
+            </div>
+        </div>
+        <!-- Desktop Menu -->
+        <div class="w-100 d-none d-md-flex justify-content-center mainnav color-dark">
+          <ul class="nav navbar-nav navbar-right d-flex flex-nowrap justify-content-around align-items-center color-dark flex-row w-100"
+           style="max-width: 1024px; padding: 8px 0px">
+            <li id="menu-item-632" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-632"><a href="https://pgrn.de/">Startseite</a></li>
+            <li id="menu-item-655" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-655"><a href="https://pgrn.de/aktuelles/">Aktuelles</a></li>
+            <li id="menu-item-653" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-653 current_page_item  current-menu-item page_item"><a href="https://pgrn.de/fuer-neue-patienten/">Für Patienten</a>
+            <ul class="sub-menu">
+              <li id="menu-item-645" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-645"><a href="https://pgrn.de/fuer-neue-patienten/">Für neue Patienten</a></li>
+              <li id="menu-item-644" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-644 current_page_item  current-menu-item page_item"><a href="https://pgrn.de/fuer-bekannte-patienten/">Für bekannte Patienten</a></li>
+              <li id="menu-item-625" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-625"><a href="https://pgrn.de/leistungen/">Leistungen</a></li>
+            </ul>
+            </li>
+            <li id="menu-item-643" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-643"><a href="https://pgrn.de/fuer-aerzte/">Für Ärzte</a></li>
+            <li id="menu-item-652" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-652"><a href="https://pgrn.de/ueber-uns/">Über uns</a>
+            <ul class="sub-menu">
+              <li id="menu-item-657" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-657"><a href="https://pgrn.de/ueber-uns/">Über uns</a></li>
+              <li id="menu-item-656" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-656"><a href="https://pgrn.de/unser-leitbild/">Unser Leitbild</a></li>
+            </ul>
+            </li>
+            <li id="menu-item-648" class="menu-item menu-item-type-post_type menu-item-object-page page-item-64 menu-item-648"><a href="https://pgrn.de/kontakt/">Kontakt</a></li>
+            <li id="menu-item-633" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-633"><a href="https://pgrn.de/anfahrt/">Anfahrt</a></li>
+            </ul>
+          </nav>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="mobNav d-block d-md-none">
+          <nav class="navbar navbar-expand-md navbar-dark color-dark">
+            <div class="container-fluid">
+              <button
+                type="button"
+                class="navbar-toggler"
+                data-toggle="collapse"
+                data-target="#mNavigation"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div
+                class="collapse navbar-collapse no-wrap"
+                id="mNavigation"
+              ></div>
+            </div>
+          </nav>
+        </div>
+      </div>
+      <main>
+        <h2 class="text-center d-block mt-4">Für bekannte Patienten</h2>
+        <div class="row cardrow">
+          <div class="col-xl-4 col-12 col-md-6 p-4">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Öffnungszeiten</h5>
+                <table class="table">
+                  <col width="50%" />
+                  <col />
+                  <thead>
+                    <tr>
+                      <th scope="col" class="text-uppercase" colspan="2">
+                        Praxis
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Montag bis Donnerstag</td>
+                      <td>
+                        08:00 - 12:00 Uhr<br />
+                        13:45 - 17:00 Uhr
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Freitag</td>
+                      <td>08:00 - 12:00 Uhr</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="card-footer text-muted text-center" style="background-color: white;">
+                <a class="btn btn-dark" href="/sprechzeiten" role="button">
+                  <div class="row align-items-center pl-3 pr-3">
+                    <i class="fas fa-chevron-right"></i>
+                    <div class="pl-1 d-none d-md-block">
+                      Informationen zu den Sprechzeiten
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-4 col-12 col-md-6 p-4">
+            <div class="card h-100">
+              <img
+                src="https://pgrn.de/wp-content/uploads/2018/07/leistung_schulung.jpg"
+                class="img-fluid"
+                style="height: 100%; object-fit: cover; filter: brightness(70%)"
+              />
+            </div>
+          </div>
+          <div class="col-xl-4 col-12 col-md-6 p-4">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Terminvereinbarung und Kontakt</h5>
+                <p class="card-text">
+                  Wir sind telefonisch erreichbar unter <b>09131 89000</b> zu
+                  den unten genannten Zeiten erreichbar. <br />
+                  Für bestimmte Anfragen können Sie auch unser
+                  <a href="/kontakt"> Kontaktformular</a> nutzen.
+               </p>
+                <p class="card-text">
+                  Um einen Termin bei uns zu vereinbaren, können Privatpatienten
+                  und Selbstzahler können auch unsere
+                  <a href="/sprechzeiten">Online-Terminvereinbarung</a> nutzen.
+                </p><table class="table">
+                  <col width="50%" />
+                  <col />
+                  <thead>
+                    <tr class="">
+                      <th scope="col" class="text-uppercase" colspan="2">
+                        Telefonische Erreichbarkeit
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Montag - Donnerstag</td>
+                      <td>
+                        08:00 - 11:30 Uhr <br />
+                        14:00 - 16:30 Uhr
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Freitag</td>
+                      <td>08:00 - 11:30 Uhr</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <div class="text-muted">
+                  Bitte sagen Sie Ihre Termin bei Verhinderung sobald als
+                  möglich ab!
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-12 col-md-6 p-4">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Rezeptbestellung</h5>
+                <div class="card-text">
+                  Falls Sie bereits im <b>laufenden Quartal</b> in der Praxis
+                  vorstellig waren, können Sie über unser
+                  <a href="/rezeptbestellung">Formular</a> ein Folgerezept
+                  bestellen.<br />
+                  Hat ein <b>neues Quartal</b> angefangen, kommen Sie bitte
+                  persönlich zu den folgenden Sprechzeiten mit Versichertenkarte
+                  und Überweisung in die Praxis. <br />
+                  <div class="text-bold text-center">
+                    Mo – Do 8-12 Uhr und 14 – 17 Uhr
+                  </div>
+                  <small class="text-muted">
+                    Hierfür benötigen Sie keinen Termin. Sollte ihr behandelnder
+                    Arzt nicht persönlich da sein, übernimmt ein ärztlicher
+                    Kollege die Weiterverordnung.<br />
+                    Bitte planen Sie etwas Zeit ein, weil bei der
+                    Therapiekontrolle beipielsweise eine Blutabnahme notwendig
+                    sein kann.
+                  </small>
+                </div>
+              </div>
+              <div class="card-footer text-muted text-center" style="background-color: white;">
+                <a class="btn btn-dark" href="/rezeptbestellung" role="button">
+                  <div class="row align-items-center pl-3 pr-3">
+                    <i class="fas fa-chevron-right"></i>
+                    <div class="pl-1 d-none d-md-block">
+                      Zur Rezeptbestellung
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-12 col-md-6 p-4">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Anfahrt</h5>
+                <p class="card-text">
+                  Um Ihnen eine gute Anfahrt zu ermöglichen finden sie unter dem
+                  folgenden Link alle nötigen Informationen.
+                </p>
+              </div>
+              <div class="card-footer text-muted text-center" style="background-color: white;">
+                <a class="btn btn-dark" href="/anfahrt" role="button">
+                  <div class="row align-items-center pl-3 pr-3">
+                    <i class="fas fa-chevron-right"></i>
+                    <div class="pl-1 d-none d-md-block">
+                      Informationen zur Anfahrt
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-12 col-md-6 p-4">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Checkliste zum Mitbringen</h5>
+
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Mund-Nase-Schutz</li>
+                  <li class="list-group-item">
+                    Versichertenkarte und gültige Überweisung
+                  </li>
+                  <li class="list-group-item">Aktueller Medikamentenplan</li>
+                  <li class="list-group-item">
+                    Schriftliche Befunde / Arztbriefe über ambulante oder
+                    stationäre Behandlungen seit der letzten Vorstellung
+                  </li>
+                  <li class="list-group-item">Röntgenpass</li>
+                  <li class="list-group-item">
+                    Wenn benötigt: Lesebrille, Dolmetscher, Lektüre ...
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <footer class="footer d-flex justify-content-end">
+      <a role="button" href="https://pgrn.de/impressum" class="btn btn-link"
+        >Impressum</a
+      >
+      <a role="button" href="https://pgrn.de/datenschutz" class="btn btn-link"
+        >Datenschutzerklärung</a
+      >
+    </footer>
+  </body>
+  <script
+    src="https://kit.fontawesome.com/e54535e2c3.js"
+    crossorigin="anonymous"
+  ></script>
+</html>
